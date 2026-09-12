@@ -43,19 +43,39 @@ The current development run generated:
 - 40 Afaan Oromo outputs
 - 0 missing outputs
 
+This is a reproducible Meta research-model condition and should not be treated as equivalent to the live translation stack used in Facebook or Instagram products.
+
 ### Google
-Google Translate outputs are being collected from the public web interface one source unit at a time to preserve item independence and audit the product ordinary users encounter.
+Google Translate outputs were collected from the public web interface one source unit at a time to preserve item independence and audit the product ordinary users encounter.
+
+The current collection contains:
+- 40 Amharic outputs
+- 40 Afaan Oromo outputs
+- 0 missing outputs
 
 ## Evaluation framework
 
-Planned human evaluation separates four dimensions:
+Human evaluation separates four dimensions:
 
 - **Semantic fidelity** — preservation of propositional meaning
 - **Pragmatic fidelity** — preservation of communicative force, modality, uncertainty, urgency, and conditionality
 - **Institutional fidelity** — preservation of rights, eligibility, procedures, status, deadlines, and institution-specific meanings
 - **Actionability** — whether a target-language reader could reasonably take the correct next step
 
-A qualitative error taxonomy will track omissions, additions, negation changes, modality shifts, eligibility shifts, deadline/number errors, institutional-term errors, ambiguity, pragmatic loss, and actionability failures.
+A qualitative error taxonomy tracks omissions, additions, negation changes, modality shifts, eligibility shifts, deadline/number errors, institutional-term errors, ambiguity, pragmatic loss, and actionability failures.
+
+Two researchers will score the same blinded outputs independently. Inter-rater agreement will be calculated before disagreements are adjudicated. Original reviewer scores will be preserved separately from adjudicated final scores.
+
+## Methods and reviewer tools
+
+The repository includes the current methodological tools used for the human-evaluation stage:
+
+- [`methods/PROTOCOL.md`](methods/PROTOCOL.md) — corpus and evaluation protocol
+- [`methods/METHODS_LOG.md`](methods/METHODS_LOG.md) — running methods log
+- [`methods/CODEBOOK.md`](methods/CODEBOOK.md) — project coding framework
+- [`methods/REVIEWER_CODEBOOK.md`](methods/REVIEWER_CODEBOOK.md) — 1–5 scoring anchors, error taxonomy, reviewer rules, and examples
+- [`methods/TWO_REVIEWER_WORKFLOW.md`](methods/TWO_REVIEWER_WORKFLOW.md) — independent two-reviewer and adjudication procedure
+- [`methods/INTER_RATER_RELIABILITY_PLAN.md`](methods/INTER_RATER_RELIABILITY_PLAN.md) — reliability analysis plan to be implemented after independent coding is complete
 
 ## Repository structure
 
@@ -64,7 +84,7 @@ data/
   development/     development corpus and system outputs
   sources/         source inventory and provenance
 scripts/           reproducible model-inference code
-methods/           protocol, methods log, and codebook
+methods/           protocol, methods log, codebooks, reviewer workflow, and reliability plan
 docs/              research design and theoretical framework
 ```
 
